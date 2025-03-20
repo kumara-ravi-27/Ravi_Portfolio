@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Style for the nav bar */
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        nav a.active {
+            background-color: #04AA6D;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#about" class="active">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Content sections -->
+    <div id="about">
+        <h2>About Me</h2>
+        <p>Write a short bio about yourself here.</p>
+    </div>
+
+    <div id="skills">
+        <h2>Skills</h2>
+        <p>List your technical and soft skills here.</p>
+    </div>
+
+    <div id="projects">
+        <h2>Projects</h2>
+        <p>Showcase your best projects or work samples here.</p>
+    </div>
+
+    <div id="contact">
+        <h2>Contact</h2>
+        <p>Provide your contact details or a form for visitors to reach out to you.</p>
+    </div>
+</body>
+</html>
