@@ -1,0 +1,10 @@
+.skill {
+    margin: 10px 0;
+  }
+  
+  .skill-bar {
+    height: 10px;
+    background: #007bff;
+    border-radius: 5px;
+  }
+  

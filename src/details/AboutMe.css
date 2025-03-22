@@ -1,0 +1,8 @@
+.profile-pic {
+    width: 150px;  /* Adjust as needed */
+    height: 182px;  /* Keep it same for perfect circle */
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  

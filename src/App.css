@@ -1,0 +1,117 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Sections */
+section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* About Me */
+#about {
+    background: #fff;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Education */
+.Education {
+    background: lightblue;
+    padding: 20px;
+}
+
+/* Projects */
+#projects {
+    background: #fff;
+    padding: 50px;
+}
+
+.project-card {
+    display: inline-block;
+    background: #e3e3e3;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills */
+#skills {
+    background: #f8f8f8;
+    padding: 50px;
+}
+
+.skill-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Contact */
+#contact {
+    background: #222;
+    color: white;
+    padding: 50px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+}

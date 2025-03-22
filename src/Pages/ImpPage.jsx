@@ -1,6 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
+
+
+
 import NavBar from "../details/NavBar";
 import AboutMe from "../details/AboutMe";
 import Education from "../details/Education";

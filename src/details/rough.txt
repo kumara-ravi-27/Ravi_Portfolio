@@ -1,3 +1,15 @@
+Add a professional summary with your background, experience, and career goals.
+
+Use real-time location (as discussed before) to make it dynamic.
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>

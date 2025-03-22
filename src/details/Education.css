@@ -1,0 +1,12 @@
+.timeline {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .timeline li {
+    margin: 20px 0;
+    padding: 5px;
+    background: #cac2c2;
+    border-radius: 10px;
+  }
+  
