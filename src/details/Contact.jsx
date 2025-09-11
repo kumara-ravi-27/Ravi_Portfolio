@@ -17,11 +17,14 @@ const Contact = () => {
 
       <div className="socials">
 
-        <p> <a href="https://www.linkedin.com/in/ThotaRaviKumar">LinkedIn</a> </p>
-        <p> <a href="https://github.com/kumara-ravi-27">GitHub</a> </p>
-        <p> <a href="https://www.instagram.com/kumara_ravi_27/">Instagram</a> </p>
-      
+        
 
+        <p><a href="https://www.linkedin.com/in/ThotaRaviKumar" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+        <p><a href="https://github.com/kumara-ravi-27" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        <p><a href="https://www.instagram.com/kumara_ravi_27/" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+
+        
+    
       </div>
 
 
