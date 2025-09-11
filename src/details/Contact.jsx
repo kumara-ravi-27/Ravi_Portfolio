@@ -16,10 +16,11 @@ const Contact = () => {
 
 
       <div className="socials">
-          
-          <a href="https://www.linkedin.com/in/ThotaRaviKumar">LinkedIn</a> |
-          <a href="https://github.com/kumara-ravi-27">GitHub</a> |
-          <a href="https://www.instagram.com/kumara_ravi_27/">Instagram</a> |
+
+        <p> <a href="https://www.linkedin.com/in/ThotaRaviKumar">LinkedIn</a> </p>
+        <p> <a href="https://github.com/kumara-ravi-27">GitHub</a> </p>
+        <p> <a href="https://www.instagram.com/kumara_ravi_27/">Instagram</a> </p>
+      
 
       </div>
 
