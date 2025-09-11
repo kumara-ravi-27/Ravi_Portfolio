@@ -9,7 +9,7 @@ const Contact = () => {
 
        <h3>PhnNo: 9000324008</h3>
 
-       <a href="mailto:travi252627@gmail.com?subject=Hello&body=Hi RaviKumar."
+       <a href="mailto:ravikumarthota1998@gmail.com?subject=Hello&body=Hi RaviKumar."
        className="text-blue-500 hover:underline cursor-pointer">travi252627@gmail.com</a>
 
       </div>
