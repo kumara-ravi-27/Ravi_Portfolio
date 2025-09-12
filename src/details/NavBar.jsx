@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 
-
-
-
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,38 +9,62 @@ const NavBar = () => {
     setIsOpen(!isOpen);
   };
 
+  // Close menu when a link is clicked (for better UX)
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <Link to="/">Ravi_Portfolio</Link>
+        <Link to="/" onClick={closeMenu}>
+          Ravi_Portfolio
+        </Link>
       </div>
+
       <ul className={isOpen ? "navbar-links active" : "navbar-links"}>
         <li>
-          <Link to="/" onClick={() => setIsOpen(false)}>AboutMe</Link>
+          <Link to="/" onClick={closeMenu}>
+            AboutMe
+          </Link>
         </li>
         <li>
-          <Link to="/Education" onClick={() => setIsOpen(false)}>Education</Link>
+          <Link to="/Education" onClick={closeMenu}>
+            Education
+          </Link>
         </li>
         <li>
-          <Link to="/Projects" onClick={() => setIsOpen(false)}>Projects</Link>
+          <Link to="/Projects" onClick={closeMenu}>
+            Projects
+          </Link>
         </li>
         <li>
-          <Link to="/Skills" onClick={() => setIsOpen(false)}>Skills</Link>
+          <Link to="/Skills" onClick={closeMenu}>
+            Skills
+          </Link>
         </li>
         <li>
-          <Link to="/AddInfo" onClick={() => setIsOpen(false)}>Add_Info</Link>
+          <Link to="/AddInfo" onClick={closeMenu}>
+            Add_Info
+          </Link>
         </li>
         <li>
-          <Link to="/Contact" onClick={() => setIsOpen(false)}>Contact</Link>
+          <Link to="/Contact" onClick={closeMenu}>
+            Contact
+          </Link>
         </li>
-
       </ul>
-      <div className="navbar-toggle" onClick={toggleMenu}>
-        <i className={isOpen ? "fas fa-times" : "fas fa-bars"}></i>
-      </div>
+
+      <button
+        className="navbar-toggle"
+        onClick={toggleMenu}
+        aria-label={isOpen ? "Close menu" : "Open menu"}
+        aria-expanded={isOpen}
+      >
+        <span className={isOpen ? "fas fa-times" : "fas fa-bars"}></span>
+      </button>
     </nav>
   );
 };
 
-export default NavBar;
-
+export default NavBar
