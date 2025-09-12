@@ -31,6 +31,9 @@ const NavBar = () => {
           <Link to="/Skills" onClick={() => setIsOpen(false)}>Skills</Link>
         </li>
         <li>
+          <Link to="/AddInfo" onClick={() => setIsOpen(false)}>Add_Info</Link>
+        </li>
+        <li>
           <Link to="/Contact" onClick={() => setIsOpen(false)}>Contact</Link>
         </li>
 
@@ -43,3 +46,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+

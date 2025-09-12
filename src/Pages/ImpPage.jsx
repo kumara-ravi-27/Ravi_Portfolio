@@ -10,6 +10,7 @@ import Education from "../details/Education";
 import Projects from "../details/Projects";
 import Skills from "../details/Skills";
 import Contact from "../details/Contact";
+import AddInfo from "../details/AddInfo";
 
 const MainPage = () => {
   return (
@@ -20,7 +21,10 @@ const MainPage = () => {
         <Route path="/Education" element={<Education />} />
         <Route path="/Projects" element={<Projects />} />
         <Route path="/Skills" element={<Skills />} />
+        <Route path="/AddInfo" element={<AddInfo />} />
         <Route path="/contact" element={<Contact />} />
+        
+        
       </Routes>
     </Router>
   );
