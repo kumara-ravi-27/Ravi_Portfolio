@@ -1,8 +1,143 @@
+
+
+#root, .app-container {
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 40px 50px;
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0eaf1, #f9fbe7);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: #2c3e50;
+} 
+
+
+
+.about-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #44bd32;
+  margin-bottom: 25px;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
 .profile-pic {
-    width: 150px;  /* Adjust as needed */
-    height: 182px;  /* Keep it same for perfect circle */
-    border-radius: 50%;
+  width: 160px;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-text {
+  flex: 1 1 300px;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.language-list,
+.highlights-list,
+.awards-list {
+  list-style: disc inside;
+  padding-left: 0;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.language-list li,
+.highlights-list li,
+.awards-list li {
+  margin-bottom: 10px;
+}
+
+strong {
+  color: #2d6a4f;
+}
+
+em {
+  font-style: italic;
+  color: #1b4332;
+}
+
+@media (max-width: 520px) {
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .profile-pic {
+    width: 140px;
+    height: 160px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+
+
+
+.profile-pic {
+    width: 150px;  /*Adjust as needed 
+    height: 182px;  /* Keep it same for perfect circle 
+    border-radius: 10%;
     object-fit: cover;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   }
-  
+
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #3a3a3a;
+}
+
+
+ */

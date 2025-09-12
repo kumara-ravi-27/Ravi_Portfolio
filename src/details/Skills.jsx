@@ -1,49 +1,67 @@
 import React from 'react'
+import './Skills.css'
 
 const Skills = () => {
   return (
-  <div>
+    <div className="skills-section">
+      <h1 className="title">My Skills</h1>
 
+      <div className="skills-container">
+        <ul className="skills-list">
+          <li>
+            <span className="skill-title">ReactJS</span>
+            <span className="skill-desc">HTML, CSS, JavaScript</span>
+            <div className="progress-bar">
+              <div className="progress reactjs"></div>
+            </div>
+          </li>
 
-    <div>
-      <h1>Skills</h1>
-      <ul>
-        <li><b>ReactJS:</b> HTML, CSS, JavaScript, Bootstrap</li>
-        <li><b>Python:</b> NumPy, Pandas, SciPy, Matplotlib</li>
-        <li><b>Linux:</b> Microservices, Ansible, Kubernetes, Docker, Containers, OpenShift</li>
-        <li><b>SQL:</b> MySQL</li>
-        <li><b>Tools:</b> SQL Developer, SQLPlus, GitHub, WinSCP, PuTTY, Beyond Compare</li>
-        <li><b>IDE:</b> VSCode, Jupyter Notebook</li>
-      </ul>
-    
-      <h3>Soft Skills</h3>
-      <ul>
-        <li>Strong organizational and time-management skills</li>
-        <li>Ability to work independently and as part of a team</li>
-        <li>Detail-oriented and adept at multitasking</li>
-      </ul>
-    </div>
-    
+          <li>
+            <span className="skill-title">SQL</span>
+            <span className="skill-desc">PostgreSQL</span>
+            <div className="progress-bar">
+              <div className="progress sql"></div>
+            </div>
+          </li>
 
+          <li>
+            <span className="skill-title">Python</span>
+            <span className="skill-desc">Flask, UI/UX, NumPy, Pandas, SciPy, Matplotlib</span>
+            <div className="progress-bar">
+              <div className="progress python"></div>
+            </div>
+          </li>
 
-{/* 
+          <li>
+            <span className="skill-title">Tools</span>
+            <span className="skill-desc">pgAdmin4, GitHub</span>
+            <div className="progress-bar">
+              <div className="progress tools"></div>
+            </div>
+          </li>
 
-     <div id="skills">
-      <h2>Skills</h2>
-      <div className="skill">
-        <span>React</span>
-        <div className="skill-bar" style={{ width: "90%" }}></div>
+          <li>
+            <span className="skill-title">IDE</span>
+            <span className="skill-desc">VS Code</span>
+            <div className="progress-bar">
+              <div className="progress ide"></div>
+            </div>
+          </li>
+        </ul>
       </div>
-     </div>
- */}
 
-
-    
-
-
-
-
-  </div>
+      <div className="soft-skills-container">
+        <h2>Soft Skills</h2>
+        <ul className="soft-skills">
+          <li>Detail-oriented and able to multitask</li>
+          <li>Self-motivated for ongoing learning</li>
+          <li>Adaptable and quick learner</li>
+          <li>Strong organizational skills</li>
+          <li>Self-learning mindset</li>
+          <li>Enthusiastic about collaborative projects</li>
+        </ul>
+      </div>
+    </div>
   )
 }
 

@@ -1,10 +1,129 @@
-.skill {
-    margin: 10px 0;
+.skills-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f9ff, #dbeafe);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  border: 1px solid #cce7ff;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  color: #1e3a8a;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.skills-list li {
+  margin: 20px 0;
+  font-size: 1rem;
+  color: #2d3748;
+  padding: 12px 15px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.skill-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+.skill-desc {
+  display: block;
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 5px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 10px;
+  border-radius: 5px;
+  animation: grow 2s ease forwards;
+}
+
+.progress.reactjs {
+  background: #61dafb;
+  width: 85%;
+}
+
+.progress.python {
+  background: #306998;
+  width: 80%;
+}
+
+.progress.sql {
+  background: #00758f;
+  width: 70%;
+}
+
+.progress.tools {
+  background: #6f42c1;
+  width: 75%;
+}
+
+.progress.ide {
+  background: #22c55e;
+  width: 70%;
+}
+
+@keyframes grow {
+  from {
+    width: 0;
   }
-  
-  .skill-bar {
-    height: 10px;
-    background: #007bff;
-    border-radius: 5px;
+  to {
+    width: var(--width);
   }
-  
+}
+
+/* Soft Skills Section */
+.soft-skills-container {
+  text-align: center;
+}
+
+.soft-skills-container h2 {
+  color: #1d4ed8;
+  margin-bottom: 15px;
+}
+
+.soft-skills {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.soft-skills li {
+  background: #eff6ff;
+  color: #1e40af;
+  font-size: 0.95rem;
+  padding: 8px 14px;
+  border-radius: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, background 0.3s;
+}
+
+.soft-skills li:hover {
+  background: #bfdbfe;
+  transform: scale(1.05);
+}

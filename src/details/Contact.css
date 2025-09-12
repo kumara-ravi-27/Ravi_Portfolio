@@ -1,3 +1,118 @@
+.contact-section {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 0 20px 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.contact-section > h2 {
+  color: #44bd32;
+  margin-bottom: 30px;
+  font-size: 2.4rem;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.contact-item {
+  flex: 1 1 250px;
+  margin: 10px 15px;
+}
+
+.contact-item h3 {
+  color: #44bd32;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.contact-link {
+  color: #007bff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  word-break: break-word;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+  color: #44bd32;
+  outline: none;
+}
+
+.social-links h3 {
+  color: #44bd32;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+
+.social-nav {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #007bff;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  min-width: 90px;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: #44bd32;
+  border-color: #44bd32;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(68, 189, 50, 0.5);
+  outline: none;
+}
+
+.social-link.linkedin:hover {
+  background-color: #0a66c2;
+  border-color: #0a66c2;
+  box-shadow: 0 6px 20px rgba(10, 102, 194, 0.5);
+}
+
+.social-link.github:hover {
+  background-color: #24292e;
+  border-color: #24292e;
+  box-shadow: 0 6px 20px rgba(36, 41, 46, 0.5);
+}
+
+.social-link.instagram:hover {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  border-color: transparent;
+  box-shadow: 0 6px 25px rgba(218, 33, 130, 0.7);
+  color: #fff;
+}
+
+
+
+
+/* 
+
 form input, form textarea {
     width: 100%;
     padding: 10px;
@@ -8,4 +123,4 @@ form input, form textarea {
     color: #007bff;
     margin: 0 10px;
   }
-  
+   */

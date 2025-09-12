@@ -1,89 +1,132 @@
-import React from 'react'
+import React from 'react';
+import './Projects.css';
+
+const projectsData = [
+  {
+    title: 'Live Projects',
+    items: [
+      {
+        name: 'Shopping Mall-app1',
+        repo: 'https://github.com/kumara-ravi-27/Shopping_Mall-app1',
+        live: 'https://main.d1ojgyma042eu0.amplifyapp.com/',
+      },
+      {
+        name: 'Current Portfolio',
+        repo: 'https://github.com/kumara-ravi-27/Ravi_Portfolio',
+        live: 'https://main.djtjbedieu57y.amplifyapp.com/',
+      },
+      // {
+      //   name: 'Gallery app-1',
+      //   repo: 'https://github.com/kumara-ravi-27/Ravi_Portfolio',
+      //   live: 'https://main.djtjbedieu57y.amplifyapp.com/',
+      // },
+      // {
+      //   name: 'Library System Management',
+      //   repo: 'https://github.com/kumara-ravi-27/Ravi_Portfolio',
+      //   live: 'https://main.djtjbedieu57y.amplifyapp.com/',
+      // },
+      
+    ],
+  },
+];
+
+const projectDetails = [
+  {
+    title: 'Portfolio',
+    bullets: [
+      'Designed and developed a professional job resume portfolio showcasing skills, experience, and achievements.',
+      'Included sections: About Me, Education, Projects, Skills, and Contact.',
+      'Showcased relevant projects, technical and soft skills, and professional contact info.',
+      'Created a visually appealing, user-friendly online presence.',
+      'Enhanced job search and career development efforts.',
+    ],
+  },
+  {
+    title: 'Shopping Mall-app1',
+    bullets: [
+      'Developed a responsive ReactJS front-end shopping mall interface with categories for Men, Women, Children, and Beauty products.',
+      'Implemented Sign In and Sign Up flows to improve user onboarding experience.',
+      'Utilized React hooks and component structure for efficient state management and reusable code.',
+      'Focused on intuitive navigation and clean UI for seamless multi-device browsing.',
+      'Gathered and implemented business requirements as per user stories.',
+      'Delivered a frontend-only SPA demonstrating strong React and UI/UX skills.',
+    ],
+  },
+  {
+    title: 'Gallery app',
+    bullets: [
+      'Built a dynamic ReactJS Gallery app managing multiple image folders with state and props.',
+      'Enabled image saving and organization across customizable folders, including a Favorites folder.',
+      'Developed a responsive UI with smooth folder navigation and image management.',
+      'Demonstrated expertise in React component architecture, hooks, and props.',
+      'Enhanced UX with interactive folder features without backend dependencies.',
+    ],
+  },
+  {
+    title: 'Library Management System (PostgreSQL)',
+    bullets: [
+      'Developed a relational database system using PostgreSQL and pgAdmin4 for library resource management.',
+      'Imported CSV data into normalized tables: Books, Branch, Employees, Members, Issued_Status, and Return_Status.',
+      'Implemented foreign key constraints to enforce data consistency and referential integrity.',
+      'Created complex SQL queries with custom filters to solve library management queries.',
+      'Displayed strong skills in database design, data modeling, and advanced SQL querying.',
+      'Leveraged PostgreSQL features to improve data retrieval and reporting.',
+    ],
+  },
+  {
+    title: 'Retail Sales Analysis (PostgreSQL)',
+    bullets: [
+      'Created a Retail Sales Analysis database in PostgreSQL using pgAdmin4 for business insights.',
+      'Designed retail_sales table capturing transactional details including demographic and sales metrics.',
+      'Performed data cleansing to ensure reliability of analysis.',
+      'Conducted extensive exploratory data analysis (EDA) on sales, customers, and categories.',
+      'Developed advanced queries for sales trends, high-volume transactions, and customer segmentation.',
+      'Applied window functions and ranking for monthly sales analysis and best-selling months identification.',
+      'Extracted insights on top customers and sales by time shifts, showcasing analytical expertise.',
+    ],
+  },
+];
 
 const Projects = () => {
   return (
-  <div>
+    <section className="projects-section">
+      <h2>Projects</h2>
+      <div className="live-projects card">
+        <h3>Live Projects</h3>
+        <ul>
+          {projectsData[0].items.map((item, index) => (
+            <li key={index}>
+              <a
+                href={item.repo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="repo-link"
+              >
+                {item.name} Repo
+              </a>{' '}
+              |{' '}
+              <a href={item.live} target="_blank" rel="noopener noreferrer" className="live-link">
+                {item.name} <b>LIVE</b>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
 
+      <div className="project-details">
+        {projectDetails.map((project, idx) => (
+          <div className="card project-card" key={idx}>
+            <h3>{project.title}</h3>
+            <ul>
+              {project.bullets.map((point, id) => (
+                <li key={id}>{point}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
 
-
-
-     <div id="projects">
-        <h2>Projects</h2>
-        <div className="project-card">
-          <h3>Portfolio Project</h3>
-          
-          <a href="https://github.com/kumara-ravi-27/Ravi_Portfolio" target="_blank"  rel="noopener noreferrer" >Git Repo</a> |
-          <a href="https://main.djtjbedieu57y.amplifyapp.com/" target="_blank" rel="noopener noreferrer">Live Demo Portfolio</a>
-         
-        </div>
-     </div>
-
-
-       
-
-     <div id="portfolio">
-       <h3>Portfolio:</h3>
-       <ul>
-         <li>Designed and developed a professional job resume portfolio, showcasing my skills, experience, and achievements.</li>
-         <li>The portfolio includes sections on About Me, Education, Projects, Skills, and Contact.</li>
-         <li>Highlighted my relevant projects, technical and soft skills, and professional contact information.</li>
-         <li>Demonstrated expertise in creating a visually appealing and user-friendly online presence.</li>
-         <li>Effective portfolio that enhances my job search and career development efforts.</li>
-       </ul>
-     
-       <h3>Web Designing:</h3>
-       <ul>
-         <li>Designed and developed an interactive Shopping Application website using ReactJS and JavaScript.</li>
-         <li>Implemented reusable components through ReactJS and dynamic features to showcase projects effectively.</li>
-         <li>Developed test scenarios based on client requirements and underlying concepts.</li>
-         <li>Gathered and comprehended business requirements provided by the client as per the User Story.</li>
-       </ul>
-     
-       <h3>Data Analysis (Pandas, NumPy, SciPy):</h3>
-       <ul>
-         <li>Utilized Pandas to read and manipulate CSV files, handling missing data and performing data cleaning.</li>
-         <li>Used NumPy for efficient numerical computations and data transformations.</li>
-         <li>Applied SciPy for statistical analysis and data modeling, including hypothesis testing and regression analysis.</li>
-         <li>Performed data filtering and sorting using Pandas, extracting relevant insights from the data.</li>
-         <li>Implemented statistical models using SciPy, including linear regression.</li>
-         <li>Visualized data using Matplotlib.</li>
-       </ul>
-     
-       <h3>Matplotlib:</h3>
-       <ul>
-         <li>Experienced in using Matplotlib, a powerful Python library for data visualization.</li>
-         <li>Designed and customized a wide range of plots, including line graphs, bar charts, scatter plots, histograms, and heatmaps.</li>
-         <li>Created publication-quality plots by leveraging advanced features such as subplots, annotations, and color mapping.</li>
-         <li>Integrated Matplotlib with Pandas and NumPy to create dynamic and insightful visualizations.</li>
-       </ul>
-     
-       <h3>Machine Learning (Python):</h3>
-       <ul>
-         <li>Passionate about leveraging machine learning techniques like Standard Deviation, Percentile, Data Distribution, and Regression.</li>
-         <li>Experienced in applying machine learning techniques, specializing in linear regression for data analysis and predictive modeling.</li>
-         <li>Proficient in leveraging historical data for rice yield analysis to forecast future production trends.</li>
-         <li>Created multiple ML projects based on specific requirements.</li>
-       </ul>
-     
-       <h3>Microservices:</h3>
-       <ul>
-         <li>Worked with Linux servers, Docker, Podman, OpenShift, Istio, Redis, Kafka, AWS-ECR, Quay, Swagger, and Microservices.</li>
-         <li>Involved in Ansible installation of various Microservice applications like Apihub, Cohttp, Feem, and Feemnode.</li>
-         <li>Deployed Microservices in various Production server geographies including India, UK, USA, and 13 other regions.</li>
-         <li>Developed test scenarios based on client requirements and business concepts.</li>
-       </ul>
-     </div>
-
-
-
-
-
-  </div>
-
-
-
-
-  )
-}
-
-export default Projects
+export default Projects;
