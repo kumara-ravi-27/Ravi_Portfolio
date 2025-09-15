@@ -6,6 +6,11 @@ const projectsData = [
     title: 'Live Projects',
     items: [
       {
+        name: 'Gallery',
+        repo: 'https://github.com/kumara-ravi-27/Gallery_app_using_reactJS.git',
+        live: 'https://main.d1ythgff2jq6mq.amplifyapp.com/',
+      },
+      {
         name: 'Shopping Mall-app1',
         repo: 'https://github.com/kumara-ravi-27/Shopping_Mall-app1',
         live: 'https://main.d1ojgyma042eu0.amplifyapp.com/',
