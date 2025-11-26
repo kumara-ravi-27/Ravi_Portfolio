@@ -8,6 +8,15 @@ const Skills = () => {
 
       <div className="skills-container">
         <ul className="skills-list">
+
+          <li>
+            <span className="skill-title">DevOps</span>
+            <span className="skill-desc">Redhat Linux, Microservices, Docker, Kubernetes,OpenShift</span>
+            <div className="progress-bar">
+              <div className="progress devops"></div>
+            </div>
+          </li>
+          
           <li>
             <span className="skill-title">ReactJS</span>
             <span className="skill-desc">HTML, CSS, JavaScript</span>
