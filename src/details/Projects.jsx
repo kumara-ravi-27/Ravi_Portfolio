@@ -47,6 +47,17 @@ const projectDetails = [
     ],
   },
   {
+  title: 'DevOps',
+  bullets: [
+    'Managed enterprise microservices like APIHub, CoHTTP, FEEM, and FEEMNode across 10+ environments',
+    'Improved APIHub installation scripts, cutting setup time by 6 hours per environment and speeding up developer onboarding',
+    'Handled deployments across 15+ global production regions (India, UK, USA, etc.) with high availability and scalability.',
+    'Built a stable microservices platform using Docker, Podman, and OpenShift, improving performance',
+    'Created optimized Docker images and Dockerfiles to speed up CI/CD deployments.',
+    'Managed Kubernetes clusters with Pods, Deployments, ConfigMaps, and implemented Istio mesh for secure service communication.',
+  ],
+},
+  {
     title: 'Shopping Mall-app1',
     bullets: [
       'Developed a responsive ReactJS front-end shopping mall interface with categories for Men, Women, Children, and Beauty products.',
