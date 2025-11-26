@@ -62,6 +62,7 @@ const Skills = () => {
       <div className="soft-skills-container">
         <h2>Soft Skills</h2>
         <ul className="soft-skills">
+          <li>Leadership Skills</li>
           <li>Detail-oriented and able to multitask</li>
           <li>Self-motivated for ongoing learning</li>
           <li>Adaptable and quick learner</li>
