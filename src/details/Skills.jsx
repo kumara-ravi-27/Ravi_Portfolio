@@ -16,6 +16,14 @@ const Skills = () => {
               <div className="progress devops"></div>
             </div>
           </li>
+
+          <li>
+            <span className="skill-title">AWS</span>
+            <span className="skill-desc">AWS-S3,EC2, AWS-ECR, Policies, roles, AWS-amplify, RDS</span>
+            <div className="progress-bar">
+              <div className="progress aws"></div>
+            </div>
+          </li>
           
           <li>
             <span className="skill-title">ReactJS</span>
