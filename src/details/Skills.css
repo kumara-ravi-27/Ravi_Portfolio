@@ -60,6 +60,12 @@
   animation: grow 2s ease forwards;
 }
 
+.progress.devops {
+  background: #FFB347;
+  width: 85%;
+}
+
+
 .progress.reactjs {
   background: #61dafb;
   width: 85%;
