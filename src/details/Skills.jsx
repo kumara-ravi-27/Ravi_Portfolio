@@ -11,7 +11,7 @@ const Skills = () => {
 
           <li>
             <span className="skill-title">DevOps</span>
-            <span className="skill-desc">Redhat Linux, Microservices, Docker, Kubernetes,OpenShift</span>
+            <span className="skill-desc">Redhat Linux, Microservices, Docker, Kubernetes, OpenShift</span>
             <div className="progress-bar">
               <div className="progress devops"></div>
             </div>
@@ -19,7 +19,7 @@ const Skills = () => {
 
           <li>
             <span className="skill-title">AWS</span>
-            <span className="skill-desc">AWS-S3,EC2, AWS-ECR, Policies, roles, AWS-amplify, RDS</span>
+            <span className="skill-desc">AWS-S3, EC2, AWS-ECR, Policies, Roles, AWS-Amplify, RDS</span>
             <div className="progress-bar">
               <div className="progress aws"></div>
             </div>
