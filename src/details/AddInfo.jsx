@@ -8,7 +8,7 @@ const AddInfo = () => (
       <li>Actively seeking new job opportunities in software development.</li>
       <li>Recently completed tenure at Infosys.</li>
       <li> Available to join immediately.</li>
-      <li>Proficient in ReactJS, Python (Flask), and PostgreSQL.</li>
+      <li>Proficient in ReactJS, Python (Fast API), and PostgreSQL.</li>
       <li>Passionate about building scalable and user-friendly applications.</li>
 
     </ul>
