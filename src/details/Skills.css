@@ -65,6 +65,10 @@
   width: 85%;
 }
 
+.progress.aws {
+  background: #FFC0CB;
+  width: 85%;
+}
 
 .progress.reactjs {
   background: #61dafb;
