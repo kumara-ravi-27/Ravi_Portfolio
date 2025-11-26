@@ -12,7 +12,7 @@ const AboutMe = () => {
           <img src={profilePic} alt="Thota Ravi Kumar" className="profile-pic" />
           <div className="profile-text">
             <p>
-              Hello! I'm <strong>Thota Ravi Kumar</strong>, a passionate Software Engineer specializing in web development and open-source contributions. I am dedicated to building innovative, user-focused solutions using modern frameworks. Experienced in collaborative environments, I thrive by continuously learning and solving complex problems with creativity and agility. 🚀
+              I'm <strong>Thota Ravi Kumar</strong>, a passionate Software Engineer specializing in web development and open-source contributions. I am dedicated to building innovative, user-focused solutions using modern frameworks. Experienced in collaborative environments, I thrive by continuously learning and solving complex problems with creativity and agility. 🚀
             </p>
             <p><strong>Location:</strong> Hyderabad, Telangana</p>
           </div>
@@ -22,7 +22,7 @@ const AboutMe = () => {
       <section id="executive-summary">
         <h2>Executive Summary</h2>
         <p>
-          Full Stack Application Developer with 3.5+ years of experience at Infosys specializing in <strong>ReactJS, Python (Flask), and PostgreSQL</strong>. Successfully deployed 15+ scalable web applications using AWS RDS, serving over 10,000 users while maintaining robust data security. Awarded Infosys’ <em>‘Exceptional Delivery’</em> in 2023 for optimizing database management systems, improving query performance by 40%.
+          Full Stack Application Developer with 4 years of experience at Infosys specializing in <strong>DevOps, Microservices, ReactJS, Python (Fast API), and PostgreSQL</strong>. Successfully deployed 15+ scalable web applications using AWS RDS, serving over 10,000 users while maintaining robust data security. Awarded Infosys’ <em>‘Exceptional Delivery’</em> in 2023 for optimizing database management systems, improving query performance by 40%.
         </p>
       </section>
 
