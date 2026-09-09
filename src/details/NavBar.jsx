@@ -1,70 +1,31 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./NavBar.css";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import './NavBar.css';
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  // Close menu when a link is clicked (for better UX)
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
-
   return (
-    <nav className="navbar">
-      <div className="navbar-logo">
-        <Link to="/" onClick={closeMenu}>
-          Ravi_Portfolio
-        </Link>
-      </div>
+    <header className="portfolio-navbar">
+      <NavLink to="/" className="nav-brand">
+        Thota Ravi Kumar
+      </NavLink>
 
-      <ul className={isOpen ? "navbar-links active" : "navbar-links"}>
-        <li>
-          <Link to="/" onClick={closeMenu}>
-            AboutMe
-          </Link>
-        </li>
-        <li>
-          <Link to="/Education" onClick={closeMenu}>
-            Education
-          </Link>
-        </li>
-        <li>
-          <Link to="/Projects" onClick={closeMenu}>
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link to="/Skills" onClick={closeMenu}>
-            Skills
-          </Link>
-        </li>
-        <li>
-          <Link to="/AddInfo" onClick={closeMenu}>
-            Add_Info
-          </Link>
-        </li>
-        <li>
-          <Link to="/Contact" onClick={closeMenu}>
-            Contact
-          </Link>
-        </li>
-      </ul>
+      <nav>
+        <ul className="nav-menu">
+          <li><NavLink to="/" className="nav-link">AboutMe</NavLink></li>
+          <li><NavLink to="/Education" className="nav-link">Education</NavLink></li>
+          <li><NavLink to="/Projects" className="nav-link">Projects</NavLink></li>
+          <li><NavLink to="/Skills" className="nav-link">Skills</NavLink></li>
+          <li><NavLink to="/Contact" className="nav-link">Contact</NavLink></li>
+          
+          <li><NavLink to="/Cv" className="nav-link">CV</NavLink></li>
+          <li><NavLink to="/Updates" className="nav-link">Updates</NavLink></li>
+          <li><NavLink to="/Privacy" className="nav-link">Privacy</NavLink></li>
 
-      <button
-        className="navbar-toggle"
-        onClick={toggleMenu}
-        aria-label={isOpen ? "Close menu" : "Open menu"}
-        aria-expanded={isOpen}
-      >
-        <span className={isOpen ? "fas fa-times" : "fas fa-bars"}></span>
-      </button>
-    </nav>
+          
+        </ul>
+      </nav>
+    </header>
   );
 };
 
-export default NavBar
+export default NavBar;
