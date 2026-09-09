@@ -1,114 +1,131 @@
-
-.projects-section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #2f3640;
+/* Page Wrapper - Adapts dynamically to Design.jsx canvas */
+.projects-page-container {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
-.projects-section h2 {
+.projects-header {
   text-align: center;
-  font-size: 2.8rem;
-  margin-bottom: 30px;
-  color: #44bd32;
+  max-width: 850px;
+  margin: 0 auto;
 }
 
-.card {
-  background: #f5f6fa;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  padding: 25px 30px;
-  margin-bottom: 30px;
-  border-left: 6px solid #44bd32;
-  transition: box-shadow 0.3s ease;
+.projects-title {
+  font-size: 2.6rem;
+  color: var(--accent-color, #44bd32);
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
-.card:hover {
-  box-shadow: 0 9px 20px rgba(68, 189, 50, 0.3);
+.projects-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary, #94a3b8);
+  margin: 0;
+  line-height: 1.6;
 }
 
-.live-projects ul,
-.project-details ul {
-  list-style: none;
-  padding-left: 0;
-  line-height: 1.7;
+/* Vertical Project Stack */
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
 }
 
-.live-projects li {
-  font-weight: 600;
-  font-size: 1.1rem;
+/* Glassmorphic Project Card */
+.project-card {
+  position: relative;
+  background: var(--card-bg, rgba(30, 41, 59, 0.75));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: var(--border-width, 1px) solid var(--border-color, rgba(255, 255, 255, 0.15));
+  border-left: 6px solid var(--accent-color, #44bd32);
+  border-radius: var(--border-radius, 16px);
+  padding: var(--card-padding, 32px 36px);
+  box-shadow: var(--card-shadow, 0 8px 32px rgba(0, 0, 0, 0.2));
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 12px;
 }
 
-.repo-link {
-  color: #273c75;
-  text-decoration: none;
+.project-tag {
+  display: inline-block;
+  background: rgba(68, 189, 50, 0.15);
+  color: var(--accent-color, #44bd32);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
   font-weight: 600;
-  transition: color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.repo-link:hover {
-  color: #44bd32;
-}
-
-.live-link {
-  color: #e84118;
+.project-heading {
+  font-size: 1.55rem;
+  color: var(--text-primary, #ffffff);
+  margin: 0 0 18px 0;
   font-weight: 700;
+  line-height: 1.35;
 }
 
-.live-link b {
-  font-weight: 900;
+/* Guaranteed Visible Custom Green Bullet Points */
+.project-bullet-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.project-card h3 {
-  color: #44bd32;
-  margin-bottom: 15px;
-  font-size: 1.6rem;
+.project-bullet-item {
+  position: relative;
+  padding-left: 24px;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--text-primary, #e2e8f0);
 }
 
-.project-card ul li {
-  font-size: 1rem;
-  margin-bottom: 10px;
-  color: #353b48;
+.project-bullet-item::before {
+  content: "•";
+  position: absolute;
+  left: 4px;
+  top: -1px;
+  color: var(--accent-color, #44bd32);
+  font-size: 1.45rem;
+  line-height: 1;
 }
 
-@media (max-width: 600px) {
-  .projects-section {
-    padding: 0 10px;
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 768px) {
+  .projects-title {
+    font-size: 2.1rem;
   }
 
-  .card {
-    padding: 20px;
+  .project-card {
+    padding: 24px 20px;
   }
 
-  .projects-section h2 {
-    font-size: 2.2rem;
+  .project-heading {
+    font-size: 1.3rem;
+  }
+
+  .project-bullet-item {
+    font-size: 0.92rem;
   }
 }
-
-
-
-
-
-
-
-
-/* 
-
-.project-card {
-    background: #55cced;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  }
-   
-
-
- */
-
-
-
-
-
-
