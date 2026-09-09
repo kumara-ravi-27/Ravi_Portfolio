@@ -1,143 +1,164 @@
-
-
-#root, .app-container {
+/* Page Wrapper - Seamlessly fills Design.jsx canvas */
+.about-page-container {
   width: 100%;
-  max-width: 900px;
-  background: #fff;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  padding: 40px 50px;
-  box-sizing: border-box;
-}
- 
-body {
-  margin: 0;
-  padding: 40px 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #e0eaf1, #f9fbe7);
-  min-height: 100vh;
+  flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  color: #2c3e50;
-} 
-
-
-
-.about-container {
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 0 20px 40px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #2c3e50;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  gap: 28px;
 }
 
-h1, h2 {
-  text-align: center;
-  color: #44bd32;
-  margin-bottom: 25px;
+/* Glassmorphism About Card */
+.about-card {
+  position: relative;
+  background: var(--card-bg, rgba(30, 41, 59, 0.75));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: var(--border-width, 1px) solid var(--border-color, rgba(255, 255, 255, 0.15));
+  border-radius: var(--border-radius, 16px);
+  padding: var(--card-padding, 32px 40px);
+  box-shadow: var(--card-shadow, 0 8px 32px rgba(0, 0, 0, 0.2));
+}
+
+.card-badge {
+  display: inline-block;
+  background: rgba(68, 189, 50, 0.15);
+  color: var(--accent-color, #44bd32);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.about-card h1,
+.about-card h2 {
+  color: var(--text-primary, #ffffff);
+  margin: 0 0 16px 0;
+  font-weight: 700;
+}
+
+.about-card h1 {
+  font-size: 2.2rem;
+  color: var(--accent-color, #44bd32);
 }
 
 .profile-section {
   display: flex;
   align-items: center;
-  gap: 25px;
-  margin-bottom: 30px;
+  gap: 32px;
   flex-wrap: wrap;
 }
 
 .profile-pic {
-  width: 160px;
-  height: 180px;
-  border-radius: 12px;
+  width: 170px;
+  height: 190px;
+  border-radius: 14px;
+  border: 2px solid var(--border-color, rgba(255, 255, 255, 0.2));
   object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
 .profile-text {
-  flex: 1 1 300px;
-  font-size: 1rem;
-  line-height: 1.55;
+  flex: 1 1 350px;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--text-primary, #e2e8f0);
 }
 
-.language-list,
+.profile-meta-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: var(--text-secondary, #94a3b8);
+}
+
+/* NCC Section Custom Styling */
+.ncc-header-block {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+  border-left: 4px solid var(--accent-color, #44bd32);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+}
+
+.ncc-role-badge {
+  display: inline-block;
+  background: rgba(68, 189, 50, 0.2);
+  color: var(--accent-color, #44bd32);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.ncc-unit-info {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary, #94a3b8);
+}
+
+/* Lists */
 .highlights-list,
 .awards-list {
-  list-style: disc inside;
-  padding-left: 0;
-  max-width: 600px;
-  margin: 0 auto 40px;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
+  list-style: disc outside;
+  padding-left: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--text-primary, #cbd5e1);
+  font-size: 0.95rem;
+  line-height: 1.65;
 }
 
-.language-list li,
-.highlights-list li,
-.awards-list li {
-  margin-bottom: 10px;
+.highlights-list strong,
+.awards-list strong {
+  color: var(--text-primary, #ffffff);
 }
 
-strong {
-  color: #2d6a4f;
+/* Dual Column for Awards & Languages */
+.about-dual-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
 }
 
-em {
-  font-style: italic;
-  color: #1b4332;
+.language-pills {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-@media (max-width: 520px) {
+.language-pills li {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.15));
+  color: var(--text-primary, #ffffff);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .about-dual-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card {
+    padding: 24px 20px;
+  }
+
   .profile-section {
     flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-  .profile-pic {
-    width: 140px;
-    height: 160px;
+    align-items: flex-start;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-
-
-
-
-.profile-pic {
-    width: 150px;  /*Adjust as needed 
-    height: 182px;  /* Keep it same for perfect circle 
-    border-radius: 10%;
-    object-fit: cover;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  }
-
-
-h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #3a3a3a;
-}
-
-
- */
