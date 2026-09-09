@@ -1,0 +1,166 @@
+/* Theme Custom Properties */
+.portfolio-canvas[data-theme="dark"] {
+  --bg-gradient-start: #0f172a;
+  --bg-gradient-mid: #1e293b;
+  --bg-gradient-end: #0f172a;
+  --card-bg: rgba(30, 41, 59, 0.75);
+  --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --border-color: rgba(255, 255, 255, 0.15);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent-color: #44bd32;
+  --orb-opacity: 0.35;
+  --toggle-bg: rgba(255, 255, 255, 0.1);
+  --toggle-border: rgba(255, 255, 255, 0.25);
+  --toggle-text: #f8fafc;
+}
+
+.portfolio-canvas[data-theme="light"] {
+  --bg-gradient-start: #f1f5f9;
+  --bg-gradient-mid: #e2e8f0;
+  --bg-gradient-end: #cbd5e1;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --accent-color: #2e7d32;
+  --orb-opacity: 0.2;
+  --toggle-bg: #ffffff;
+  --toggle-border: rgba(0, 0, 0, 0.15);
+  --toggle-text: #1e293b;
+}
+
+:root {
+  --portfolio-max-width: 100%;
+  --portfolio-min-height: 100vh;
+  --page-padding: 24px 32px;
+  --card-padding: 32px 40px;
+  --border-width: 1px;
+  --border-radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+/* Canvas Container */
+.portfolio-canvas {
+  position: relative;
+  width: 100vw;
+  min-height: var(--portfolio-min-height);
+  background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-mid), var(--bg-gradient-end));
+  color: var(--text-primary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Floating Top Switcher Bar */
+.theme-switch-container {
+  position: fixed;
+  top: 14px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--toggle-bg);
+  color: var(--toggle-text);
+  border: 1px solid var(--toggle-border);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.theme-toggle-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Background Animated Ambience */
+.canvas-bg-decorations {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.moving-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: var(--orb-opacity);
+  animation: floatOrb 18s ease-in-out infinite alternate;
+}
+
+.orb-1 {
+  width: 450px;
+  height: 450px;
+  background: #2563eb;
+  top: -100px;
+  left: -100px;
+}
+
+.orb-2 {
+  width: 500px;
+  height: 500px;
+  background: var(--accent-color);
+  bottom: -150px;
+  right: -100px;
+  animation-duration: 22s;
+  animation-delay: -5s;
+}
+
+.orb-3 {
+  width: 350px;
+  height: 350px;
+  background: #9333ea;
+  top: 40%;
+  left: 45%;
+  animation-duration: 26s;
+  animation-delay: -10s;
+}
+
+@keyframes floatOrb {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(80px, 60px) scale(1.15);
+  }
+  100% {
+    transform: translate(-60px, 90px) scale(0.9);
+  }
+}
+
+/* Full Width Body Wrapper */
+.portfolio-body-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--portfolio-max-width);
+  margin: 0 auto;
+  padding: var(--page-padding);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
