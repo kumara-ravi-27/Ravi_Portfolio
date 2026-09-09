@@ -1,98 +1,60 @@
-
-.navbar {
+.portfolio-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: var(--card-bg, rgba(30, 41, 59, 0.85));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: var(--border-width, 1px) solid var(--border-color, rgba(255, 255, 255, 0.15));
+  padding: 16px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  padding: 15px 20px;
-  color: white;
-  position: relative;
-  z-index: 1000;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.navbar-logo a {
+.nav-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent-color, #44bd32);
   text-decoration: none;
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
+  letter-spacing: 0.5px;
 }
 
-.navbar-links {
-  list-style: none;
+.nav-menu {
   display: flex;
-  gap: 25px;
+  gap: 20px;
+  list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
-.navbar-links li {
-  display: inline;
-}
-
-.navbar-links a {
+.nav-link {
+  color: var(--text-secondary, #94a3b8);
   text-decoration: none;
-  color: white;
-  font-size: 1rem;
-  transition: color 0.3s ease-in-out;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  padding: 6px 12px;
+  border-radius: 8px;
 }
 
-.navbar-links a:hover {
-  color: #f4a261;
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text-primary, #ffffff);
+  background: rgba(255, 255, 255, 0.05);
 }
-
-
-.navbar-toggle {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  background: none;
-  border: none;
-  color: rgb(227, 16, 146);
-  outline: none;
-}
-
-
-.navbar-toggle .fas.fa-bars::before {
-  content: '\2630';
-}
-
-.navbar-toggle .fas.fa-times::before {
-  content: '\2715';
-}
-
 
 @media (max-width: 768px) {
-  .navbar-links {
+  .portfolio-navbar {
+    padding: 14px 20px;
     flex-direction: column;
-    position: fixed;
-    top: 60px;
-    left: -100%;
-    width: 70%;
-    height: 100vh;
-    background-color: #333;
-    padding-top: 40px;
-    gap: 30px;
-    text-align: center;
-    transition: left 0.3s ease-in-out;
-    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.4);
+    gap: 12px;
   }
-
-  .navbar-links.active {
-    left: 0;
-  }
-
-  .navbar-links li {
-    display: block;
-  }
-
-  .navbar-links a {
-    font-size: 1.3rem;
-    padding: 10px 0;
-    display: block;
-  }
-
-  .navbar-toggle {
-    display: block;
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
   }
 }
